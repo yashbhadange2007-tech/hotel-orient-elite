@@ -82,7 +82,6 @@ export default function OjasRestaurant() {
               key={image.title}
               image={image}
               priority={index === 0}
-              className={index === 1 ? "sm:mt-10" : ""}
             />
           ))}
         </div>
