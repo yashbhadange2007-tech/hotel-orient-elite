@@ -3,7 +3,6 @@ import { Loader, LuxuryFooter, Navigation, PageShell } from "./components";
 import BookingExperience from "./sections/BookingExperience";
 import CatenaCafe from "./sections/CatenaCafe";
 import ContactSection from "./sections/ContactSection/ContactSection";
-import ExperienceSection from "./sections/ExperienceSection";
 import HeroSection from "./sections/HeroSection";
 import OjasRestaurant from "./sections/OjasRestaurant";
 import RiddhiSiddhiHall from "./sections/RiddhiSiddhiHall";
@@ -21,7 +20,6 @@ export default function App() {
       <main id="top" className="relative z-10">
         <HeroSection />
         <StorytellingSection />
-        <ExperienceSection />
         <RoomShowcase />
         <OjasRestaurant />
         <CatenaCafe />

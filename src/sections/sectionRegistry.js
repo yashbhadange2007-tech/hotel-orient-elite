@@ -10,10 +10,6 @@ export const sectionRegistry = [
     component: lazy(() => import("./StorytellingSection")),
   },
   {
-    id: "experience",
-    component: lazy(() => import("./ExperienceSection")),
-  },
-  {
     id: "rooms",
     component: lazy(() => import("./RoomShowcase")),
   },
