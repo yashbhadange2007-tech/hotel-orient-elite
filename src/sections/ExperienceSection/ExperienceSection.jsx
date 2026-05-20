@@ -21,8 +21,8 @@ export default function ExperienceSection() {
     <SectionShell
       id="stay"
       eyebrow="Stay Experience"
-      title="A smooth Solapur stay shaped around real guest needs."
-      description="Every journey is designed around ease: arrive smoothly, rest well, dine comfortably, and move through Solapur with confidence."
+      title="A refined Solapur stay, made effortless."
+      description="Arrive smoothly, rest well, dine comfortably, and move through the city with the quiet assurance of thoughtful hospitality."
       className="bg-[radial-gradient(circle_at_78%_24%,rgba(216,183,88,0.1),transparent_24rem)]"
     >
       <motion.div className="mt-14 grid gap-5 md:grid-cols-3 lg:mt-16" variants={staggerContainer}>

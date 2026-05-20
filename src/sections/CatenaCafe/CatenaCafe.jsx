@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "../../animation/motionVariants";
 import SectionShell from "../../components/layout/SectionShell";
+import SectionContactCard from "../../components/ui/SectionContactCard";
 import catenaCafeImage from "../../assets/catena-cafe.png";
 
 const cafeNotes = [
@@ -14,8 +15,8 @@ export default function CatenaCafe() {
     <SectionShell
       id="catena"
       eyebrow="Catena Cafe"
-      title="A premium rooftop social lounge for golden city evenings."
-      description="Catena brings a cozy, modern cafe atmosphere to Hotel Orient Elite, shaped for coffee, conversation, and unhurried moments under warm ambient light."
+      title="Rooftop evenings with a quieter glow."
+      description="Catena brings a modern cafe atmosphere to Hotel Orient Elite, shaped for coffee, conversation, and unhurried moments under warm ambient light."
       className="overflow-hidden bg-[radial-gradient(circle_at_78%_22%,rgba(111,124,97,0.18),transparent_24rem),radial-gradient(circle_at_18%_72%,rgba(216,183,88,0.09),transparent_22rem)]"
       size="lg"
     >
@@ -57,6 +58,7 @@ export default function CatenaCafe() {
               <p className="mt-4 text-sm leading-7 text-ivory-100/66">{text}</p>
             </motion.article>
           ))}
+          <SectionContactCard label="Catena Cafe" phone="+91 88570 37171" />
         </motion.div>
       </motion.div>
     </SectionShell>

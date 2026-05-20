@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import { fadeUp, hoverLift, pressTap, staggerContainer } from "../../animation/motionVariants";
 import SectionShell from "../../components/layout/SectionShell";
 import deluxeQueen from "../../assets/rooms/deluxe-queen-bed-ac.png";
+import dormitoryRoom from "../../assets/rooms/dormitory-rrom.png";
 import executiveDeluxeTwin from "../../assets/rooms/executive-deluxe-twin-bed-ac.png";
 import executiveSuite from "../../assets/rooms/executive-suite-ac.png";
 import singleNonAc from "../../assets/rooms/single-non-ac.png";
@@ -52,6 +53,25 @@ const rooms = [
     comfort: "Solo comfort",
     highlights: ["Single bed", "Compact layout", "Desk space", "Clean linen"],
   },
+  {
+    id: "dormitory-stay",
+    title: "Dormitory Stay",
+    subtitle: "Affordable Group Comfort",
+    description:
+      "A spacious and clean dormitory-style stay designed for groups, pilgrims, business teams, and budget travelers seeking comfort with practicality.",
+    image: dormitoryRoom,
+    badge: "Group Stay",
+    occupancy: "Group stay",
+    comfort: "Affordable group comfort",
+    highlights: [
+      "Multiple Individual Beds",
+      "Spacious Shared Layout",
+      "Clean Premium Interiors",
+      "Ideal for Groups",
+      "Attached Washroom",
+      "24x7 Assistance",
+    ],
+  },
 ];
 
 function RoomCard({ room, index, onOpen }) {
@@ -74,7 +94,8 @@ function RoomCard({ room, index, onOpen }) {
             className="h-full w-full object-cover object-center transition-transform duration-700 ease-hover group-hover:scale-[1.025]"
             loading="eager"
             decoding="async"
-            fetchPriority={index < 2 ? "high" : "auto"}
+            fetchPriority={index < 3 ? "high" : "auto"}
+            sizes="(min-width: 1280px) 44vw, (min-width: 768px) 50vw, 100vw"
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-950/56 via-transparent to-ink-950/8" />
           <span className="absolute right-4 top-4 rounded-md border border-gold-200/24 bg-ink-950/72 px-3 py-2 text-xs font-bold uppercase tracking-[0.14em] text-gold-200 backdrop-blur-md">
@@ -184,13 +205,13 @@ function RoomLightbox({ rooms, activeIndex, onClose, onMove }) {
                 key={room.id}
                 src={room.image}
                 alt={`${room.title} full room view`}
-                className="max-h-[76vh] w-full object-contain"
+                className="max-h-[52vh] w-full object-contain sm:max-h-[76vh]"
                 decoding="async"
               />
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ink-950/88 via-ink-950/18 to-transparent" />
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 hidden h-1/2 bg-gradient-to-t from-ink-950/88 via-ink-950/18 to-transparent sm:block" />
             </div>
 
-            <div className="absolute inset-x-0 bottom-0 z-10 p-5 sm:p-7">
+            <div className="relative z-10 border-t border-ivory-50/10 bg-ink-950 p-5 sm:absolute sm:inset-x-0 sm:bottom-0 sm:border-t-0 sm:bg-transparent sm:p-7">
               <p className="eyebrow">Room 0{activeIndex + 1}</p>
               <h3 className="mt-3 max-w-3xl font-display text-4xl font-semibold leading-none text-ivory-50 sm:text-5xl">
                 {room.title}
@@ -273,9 +294,10 @@ export default function RoomShowcase() {
     <SectionShell
       id="rooms"
       eyebrow="Rooms"
-      title="Refined rooms for calm, polished city stays."
-      description="Choose from four carefully presented room categories, each photographed with the real warmth and comfort guests experience at Hotel Orient Elite."
+      title="Curated comfort stays."
+      description="Five considered room categories, each shaped around clean interiors, warm lighting, and the quiet ease guests expect at Hotel Orient Elite."
       className="bg-[radial-gradient(circle_at_18%_28%,rgba(216,183,88,0.08),transparent_26rem)]"
+      eagerReveal
     >
       <motion.div
         className="mt-14 grid gap-5 md:grid-cols-2 lg:mt-16 xl:gap-6"

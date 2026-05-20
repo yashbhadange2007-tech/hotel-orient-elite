@@ -22,8 +22,8 @@ export default function ContactSection() {
     <SectionShell
       id="location"
       eyebrow="Arrive Effortlessly"
-      title="Find your way to Orient Elite."
-      description="A central Solapur address with direct calling, WhatsApp assistance, and map-ready directions for a smooth arrival."
+      title="A central address, easy to reach."
+      description="Direct calling, WhatsApp assistance, and map-ready directions make every arrival at Hotel Orient Elite feel composed."
       className="overflow-hidden bg-[radial-gradient(circle_at_24%_18%,rgba(216,183,88,0.13),transparent_26rem),radial-gradient(circle_at_82%_72%,rgba(255,250,240,0.035),transparent_22rem)]"
       size="lg"
     >

@@ -10,6 +10,7 @@ export default function SectionShell({
   description,
   children,
   className,
+  eagerReveal = false,
   size = "md",
 }) {
   const sectionClass = size === "lg" ? "section-frame-lg" : "section-frame";
@@ -19,8 +20,9 @@ export default function SectionShell({
       id={id}
       className={cx(sectionClass, "scroll-mt-24", className)}
       variants={staggerContainer}
-      initial="hidden"
-      whileInView="visible"
+      initial={eagerReveal ? false : "hidden"}
+      animate={eagerReveal ? "visible" : undefined}
+      whileInView={eagerReveal ? undefined : "visible"}
       viewport={viewportOnce}
       data-section={id}
     >

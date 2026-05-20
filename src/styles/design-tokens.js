@@ -45,7 +45,7 @@ const designTokens = {
   },
   fonts: {
     display: ['"Cormorant Garamond"', "Georgia", "serif"],
-    sans: ['"Inter"', '"Segoe UI"', "Arial", "sans-serif"],
+    sans: ['"Manrope"', '"Inter"', '"Segoe UI"', "Arial", "sans-serif"],
   },
   radii: {
     xs: "0.25rem",

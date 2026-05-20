@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { fadeUp, staggerContainer } from "../../animation/motionVariants";
 import SectionShell from "../../components/layout/SectionShell";
+import SectionContactCard from "../../components/ui/SectionContactCard";
 import { cx } from "../../utils/classNames";
 import rsHallHeroShowcase from "../../assets/hall/rs-hall-hero-showcase.png";
 import rsHallStageCloseUp from "../../assets/hall/rs-hall-stage-close-up.png";
@@ -107,10 +108,11 @@ export default function RiddhiSiddhiHall() {
     <SectionShell
       id="hall"
       eyebrow="Elegant Celebrations & Gatherings"
-      title="Riddhi Siddhi Hall"
-      description="An intimate event space for engagement ceremonies, birthdays, and family gatherings, shaped by warm hospitality, floral detail, and a quiet sense of occasion."
+      title="Gatherings framed with elegance."
+      description="Riddhi Siddhi Hall is an intimate setting for engagements, birthdays, and family occasions, composed with floral detail, warm light, and attentive hosting."
       className="overflow-hidden bg-[radial-gradient(circle_at_52%_18%,rgba(216,183,88,0.16),transparent_30rem),linear-gradient(180deg,rgba(5,4,3,0),rgba(216,183,88,0.035)_44%,rgba(5,4,3,0))]"
       size="lg"
+      eagerReveal
     >
       <motion.div className="mt-14 grid gap-8 lg:mt-18 lg:grid-cols-[1.08fr_0.92fr] lg:items-center" variants={staggerContainer}>
         <HallImageCard image={hallImages[0]} index={0} className="[&>span:nth-child(3)]:aspect-[4/3]" onOpen={openLightbox} />
@@ -132,6 +134,7 @@ export default function RiddhiSiddhiHall() {
                 </div>
               ))}
             </div>
+            <SectionContactCard label="Riddhi Siddhi Hall" phone="+91 70586 48181" className="mt-6" />
           </div>
         </motion.div>
       </motion.div>

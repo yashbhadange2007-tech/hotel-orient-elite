@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "../../animation/motionVariants";
 import SectionShell from "../../components/layout/SectionShell";
+import SectionContactCard from "../../components/ui/SectionContactCard";
 import { cx } from "../../utils/classNames";
 import ojasMainImage from "../../assets/ojas-restaurant-main.png";
 import ojasBoothsImage from "../../assets/ojas-restaurant-booths.png";
@@ -61,8 +62,8 @@ export default function OjasRestaurant() {
     <SectionShell
       id="ojas"
       eyebrow="Ojas Veg Restaurant"
-      title="Refined vegetarian dining with polished comfort."
-      description="Quiet interiors, warm service, and thoughtfully prepared vegetarian meals come together in a clean dining experience shaped for families, travellers, and unhurried conversations."
+      title="Vegetarian dining with warm hospitality."
+      description="Quiet interiors, attentive service, and thoughtfully prepared vegetarian meals create a clean dining experience for families, travellers, and unhurried conversations."
       className="overflow-hidden bg-[radial-gradient(circle_at_18%_26%,rgba(196,108,69,0.13),transparent_22rem),radial-gradient(circle_at_82%_70%,rgba(216,183,88,0.09),transparent_24rem)]"
       size="lg"
     >
@@ -74,6 +75,7 @@ export default function OjasRestaurant() {
               <p className="mt-4 text-sm leading-7 text-ivory-100/66">{text}</p>
             </motion.article>
           ))}
+          <SectionContactCard label="Ojas Veg Restaurant" phone="+91 70586 48181" />
         </motion.div>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:gap-6">

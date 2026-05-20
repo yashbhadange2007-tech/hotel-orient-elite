@@ -13,8 +13,8 @@ export default function StorytellingSection() {
     <SectionShell
       id="storytelling"
       eyebrow="The Orient Elite way"
-      title="A stay shaped by comfort, trust, and thoughtful hospitality."
-      description="The experience is calm, clean, and reassuring: premium enough to feel special, practical enough to feel effortless."
+      title="Spaces designed for calm living."
+      description="A stay defined by cleanliness, central access, and warm guidance: polished enough to feel special, practical enough to feel effortless."
       size="lg"
       className="overflow-hidden"
     >

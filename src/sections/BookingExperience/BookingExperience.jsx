@@ -9,6 +9,7 @@ const roomTypes = [
   "Executive Suite AC",
   "Deluxe Queen Bed AC",
   "Single Non AC",
+  "Dormitory Stay",
 ];
 
 export default function BookingExperience() {
@@ -53,8 +54,8 @@ export default function BookingExperience() {
     <SectionShell
       id="booking"
       eyebrow="Reserve"
-      title="Begin your Hotel Orient Elite stay."
-      description="A calm reservation flow for lodge stays, room preferences, dates, and guest details."
+      title="Reserve your stay with quiet ease."
+      description="Share your room preference, dates, and guest details through a calm WhatsApp-led reservation flow."
       size="lg"
       className="bg-[radial-gradient(circle_at_72%_18%,rgba(216,183,88,0.12),transparent_24rem),radial-gradient(circle_at_20%_78%,rgba(255,250,240,0.035),transparent_18rem)]"
     >
