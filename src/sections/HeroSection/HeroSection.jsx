@@ -2,8 +2,11 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { fadeUp, hoverLift, staggerContainer } from "../../animation/motionVariants";
 import LuxuryContainer from "../../components/layout/LuxuryContainer";
+import InstagramButton from "../../components/ui/InstagramButton";
 import { siteConfig } from "../../config/site";
 import heroImage from "../../assets/orient-elite-hero.png";
+
+const hotelInstagramUrl = "https://www.instagram.com/hotelorientelite?igsh=MTAyY3RsMXZvZDVrZw==";
 
 export default function HeroSection() {
   const sectionRef = useRef(null);
@@ -47,23 +50,27 @@ export default function HeroSection() {
           <motion.div className="glass-panel mt-9 max-w-xl rounded-lg p-3 sm:flex sm:items-center sm:justify-between sm:gap-4" variants={fadeUp}>
             <div className="px-2 py-2">
               <p className="text-sm font-semibold text-ivory-50">Plan a composed Solapur stay</p>
-              <p className="mt-1 text-xs leading-5 text-ivory-100/62">Rated {siteConfig.rating} by {siteConfig.reviewCount} guests. Check-in from {siteConfig.checkIn}.</p>
+              <p className="mt-1 text-xs leading-5 text-ivory-100/62">
+                <span className="block">Rated {siteConfig.rating} by {siteConfig.reviewCount} guests.</span>
+                <span className="block">Check-in from {siteConfig.checkIn}.</span>
+              </p>
             </div>
             <div className="flex flex-wrap gap-3 pt-3 sm:pt-0">
               <motion.a
                 href="#booking"
-                className="rounded-md bg-gold-300 px-5 py-3 text-sm font-bold text-ink-950 shadow-glow transition-colors duration-300 hover:bg-gold-200"
+                className="inline-flex min-h-12 min-w-[10.75rem] items-center justify-center rounded-md bg-gold-300 px-5 py-3 text-sm font-bold text-ink-950 shadow-glow transition-colors duration-300 hover:bg-gold-200"
                 whileHover={hoverLift}
               >
                 Reserve Your Stay
               </motion.a>
               <motion.a
                 href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
-                className="rounded-md border border-ivory-50/18 px-5 py-3 text-sm font-bold text-ivory-50 transition-colors duration-300 hover:border-gold-200/70 hover:text-gold-200"
+                className="inline-flex min-h-12 min-w-[10.75rem] items-center justify-center rounded-md border border-ivory-50/18 px-5 py-3 text-sm font-bold text-ivory-50 transition-colors duration-300 hover:border-gold-200/70 hover:text-gold-200"
                 whileHover={hoverLift}
               >
                 Call Now
               </motion.a>
+              <InstagramButton href={hotelInstagramUrl} label="Instagram" className="min-w-[10.75rem]" />
             </div>
           </motion.div>
         </motion.div>
